@@ -4,14 +4,13 @@
 </template>
 
 <script setup lang="ts">
-import { useCounterStore2 } from "@/stores/index";
+import { useCounterStore } from "@/stores/user";
 import { storeToRefs } from "pinia";
 import { useMousePosition } from "@/hooks/user";
-const counterStore = useCounterStore2();
+const counterStore = useCounterStore();
 const hooks = useMousePosition();
 const { count2 } = storeToRefs(counterStore);
 function add() {
-  console.log(counterStore);
   counterStore.increment();
 }
 counterStore.$subscribe((mutation, state) => {

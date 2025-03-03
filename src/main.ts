@@ -5,7 +5,7 @@ import router from "./router";
 import "./assets/main.css";
 import pinia from "@/utils/pinia";
 import "@/utils/permission";
-
+import "@/utils/rem.js";
 const app = createApp(App);
 
 app.use(createPinia());

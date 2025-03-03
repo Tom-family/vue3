@@ -2,6 +2,7 @@
   <div @click="signIn">首页</div>
   <div @click="signOut">退出</div>
   <div>{{ count2 }}</div>
+  <div class="rem">13</div>
 </template>
 
 <script setup lang="ts">
@@ -32,3 +33,10 @@ counterStore.$subscribe((mutation, state) => {
 });
 hooks.add();
 </script>
+<style scoped>
+.rem{
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+</style>

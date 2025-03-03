@@ -1,5 +1,5 @@
 <template>
-  <div @click="signIn">跳转</div>
+  <div @click="signIn">登录</div>
 </template>
 
 <script setup lang="ts">

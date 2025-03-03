@@ -1,22 +1,23 @@
 {
   "compilerOptions": {
-    "noEmit": true,
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "strict": false,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true,
-    "baseUrl": "./",
+    "noEmit": true,                       //禁止 TypeScript 编译器生成任何输出文件（如 .js 文件）。
+    "target": "ESNext",                   //指定编译后的 JavaScript 目标版本为最新的 ECMAScript 标准（ESNext）。
+    "useDefineForClassFields": true,      //确保类字段的行为符合最新的 ECMAScript 规范。
+    "module": "ESNext",                   //指定生成的模块格式为最新的 ECMAScript 模块（ES Modules）    适用于现代浏览器和打包工具（如 Vite、Webpack）。
+    "moduleResolution": "Node",           //确保 TypeScript 能够正确解析 node_modules 中的模块。
+    "strict": false,                      //禁用所有严格的类型检查选项
+    "jsx": "preserve",                    //保留 JSX 语法，不将其转换为 JavaScript。
+    "sourceMap": true,                    //生成 .map 文件，用于调试时将编译后的代码映射回原始 TypeScript 代码。
+    "resolveJsonModule": true,            //允许导入 JSON 文件作为模块。
+    "isolatedModules": true,              //将每个文件作为独立的模块进行编译。
+    "esModuleInterop": true,              //允许在 TypeScript 中更自然地导入 CommonJS 模块（如 require 语法）。
+    "lib": ["ESNext", "DOM"],             //确保 TypeScript 能够识别浏览器环境和最新的 JavaScript 特性。
+    "skipLibCheck": true,                 //跳过对声明文件（.d.ts）的类型检查。
+    "baseUrl": "./",                      //指定模块解析的基准目录。(与 paths 配合使用，方便配置模块别名。)
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"]                    //配置模块别名，将 @/ 映射到 src/ 目录
     }
   },
+  //指定需要包含在编译范围内的文件或目录    通过这些配置，你可以确保 TypeScript 编译器能够正确地处理 Vue 3 项目中的代码，并与现代开发工具（如 Vite、ESLint、Vitest 等）无缝集成。
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "vite.config.*", "vitest.config.*", "cypress.config.*", "nightwatch.conf.*", "playwright.config.*", "eslint.config.*"]
 }

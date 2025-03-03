@@ -2,7 +2,9 @@
   <div @click="signIn">首页</div>
   <div @click="signOut">退出</div>
   <div>{{ count2 }}</div>
-  <div class="rem">13</div>
+  <div class="rem">
+    <div class="kkk">kkk</div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -11,7 +13,7 @@ import { login } from "@/api/index";
 import { useCounterStore } from "@/stores/user";
 import { storeToRefs } from "pinia";
 import { useMousePosition } from "@/hooks/user";
-console.log(2222)
+console.log(2222);
 const router = useRouter();
 const counterStore = useCounterStore();
 const hooks = useMousePosition();
@@ -33,10 +35,15 @@ counterStore.$subscribe((mutation, state) => {
 });
 hooks.add();
 </script>
-<style scoped>
-.rem{
+<style lang="scss" scoped>
+.rem {
   width: 200px;
   height: 200px;
   background: red;
+  .kkk{
+    width: 100px;
+    height: 100px;
+    background: blueviolet;
+  }
 }
 </style>

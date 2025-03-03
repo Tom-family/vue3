@@ -19,6 +19,7 @@ export default defineConfig({
       resolvers: [VantResolver()],
     }),
   ],
+  base: './', // 根据你的部署环境设置正确的 base URL
   server: {
     proxy: {
       "/api": {

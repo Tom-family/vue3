@@ -1,6 +1,6 @@
 // 设置 rem 函数
-function setRem() {
-  const width = document.documentElement.clientWidth;
+function setRem():void {
+  const width:number = document.documentElement.clientWidth;
   document.documentElement.style.fontSize = width / 10 + "px"; // 1rem = 192px，设计稿宽度为 192px
 }
 // 初始化

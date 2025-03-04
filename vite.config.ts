@@ -35,4 +35,7 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  build: {
+    assetsInlineLimit: 200 * 1024, // 大于 200KB 的文件会被打包成单独的文件，而小于 200KB 的文件会被内联为 Base64
+  },
 });

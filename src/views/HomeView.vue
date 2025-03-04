@@ -33,6 +33,8 @@ counterStore.$subscribe((mutation, state) => {
   console.log(mutation);
   console.log(state.count2);
 });
+showToast('提示内容');
+
 hooks.add();
 </script>
 <style lang="scss" scoped>

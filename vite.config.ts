@@ -13,7 +13,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     AutoImport({
-      resolvers: [VantResolver()],
+      resolvers: [VantResolver()]
     }),
     Components({
       resolvers: [VantResolver()],

@@ -13,7 +13,7 @@ import { login } from "@/api/index";
 import { useCounterStore } from "@/store/user";
 import { storeToRefs } from "pinia";
 import { useMousePosition } from "@/hooks/user";
-import { onBeforeUnmount, onMounted } from "vue";
+import { onActivated, onDeactivated } from "vue";
 const router = useRouter();
 const counterStore = useCounterStore();
 const hooks = useMousePosition();
@@ -36,13 +36,13 @@ counterStore.$subscribe((mutation, state) => {
 // showToast("提示内容");
 hooks.add();
 
-onMounted(() => {
-  console.log(111111111);
+onActivated(() => {
+  console.log("初次加载");
+});
+onDeactivated(() => {
+  console.log("初次卸载");
 });
 
-// onBeforeUnmount(() => {
-//   closeToast();
-// });
 </script>
 <style lang="scss" scoped>
 .rem {

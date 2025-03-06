@@ -1,6 +1,5 @@
 <template>
   <headerPage v-if="route.meta.header" />
-  {{ route.meta.keep }}
   <router-view v-slot="{ Component }">
     <keep-alive>
       <component :is="Component" v-if="route.meta.keep" />

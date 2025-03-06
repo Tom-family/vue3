@@ -5,7 +5,7 @@
 
 <script setup lang="ts">
 import { login } from "@/api/index";
-import { useCounterStore } from "@/stores/user";
+import { useCounterStore } from "@/store/user";
 import { storeToRefs } from "pinia";
 import { useMousePosition } from "@/hooks/user";
 const counterStore = useCounterStore();

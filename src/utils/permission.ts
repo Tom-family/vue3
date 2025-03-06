@@ -1,5 +1,5 @@
 import router from "../router";
-import { useCounterStore } from "@/stores/user";
+import { useCounterStore } from "@/store/user";
 
 const whiteList = ["/login"];
 

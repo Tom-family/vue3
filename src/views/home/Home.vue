@@ -13,7 +13,7 @@ import { login } from "@/api/index";
 import { useCounterStore } from "@/store/user";
 import { storeToRefs } from "pinia";
 import { useMousePosition } from "@/hooks/user";
-console.log(2222);
+import { onBeforeUnmount, onMounted } from "vue";
 const router = useRouter();
 const counterStore = useCounterStore();
 const hooks = useMousePosition();
@@ -33,16 +33,23 @@ counterStore.$subscribe((mutation, state) => {
   console.log(mutation);
   console.log(state.count2);
 });
-showToast('提示内容');
-
+// showToast("提示内容");
 hooks.add();
+
+onMounted(() => {
+  console.log(111111111);
+});
+
+// onBeforeUnmount(() => {
+//   closeToast();
+// });
 </script>
 <style lang="scss" scoped>
 .rem {
   width: 200px;
   height: 200px;
   background: red;
-  .kkk{
+  .kkk {
     width: 100px;
     height: 100px;
     background: blueviolet;

@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import Login from "@/views/Login.vue";
+import Login from "@/views/Login/Login.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,22 +14,30 @@ const router = createRouter({
     },
     {
       path: "/",
-      redirect:'/home'
+      redirect: "/home",
     },
     {
       path: "/home",
       name: "home",
-      component: HomeView,
+      component: () => import("@//views/home/Home.vue"),
       meta: {
         title: "首页",
+        keep:true,
+        header: true,
+        tabbar: true,
+        code:1,
       },
     },
     {
-      path: "/about",
-      name: "about",
-      component: () => import("../views/AboutView.vue"),
+      path: "/my",
+      name: "my",
+      component: () => import("@/views/my/My.vue"),
       meta: {
         title: "我的",
+        keep:false,
+        header: true,
+        tabbar: true,
+        code:2,
       },
     },
   ],

@@ -11,7 +11,7 @@ import { VantResolver } from "@vant/auto-import-resolver";
 export default defineConfig({
   plugins: [
     vue(),
-    vueDevTools(),
+    // vueDevTools(),
     AutoImport({
       resolvers: [VantResolver()]
     }),

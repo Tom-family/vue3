@@ -2,11 +2,16 @@
   <div class="header-page">
     <div class="title">我是头</div>
   </div>
+  <div class="empty"></div>
 </template>
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 .header-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 50px;
   display: flex;
   align-items: center;
@@ -20,5 +25,8 @@
     -webkit-background-clip: text;
     color: transparent;
   }
+}
+.empty {
+  height: 50px;
 }
 </style>

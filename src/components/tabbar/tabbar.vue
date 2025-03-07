@@ -9,6 +9,7 @@
       </div>
     </div>
   </div>
+  <div class="empty"></div>
 </template>
 <script setup lang="ts">
 import { useRoute } from "vue-router";
@@ -62,5 +63,8 @@ const tabbarList = [
       }
     }
   }
+}
+.empty {
+  height: 60px;
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div @click="signIn">用户信息</div>
   <div @click="signOut">退出</div>
+  <div @click="getMessage">获取用户信息</div>
   <div>{{ count2 }}</div>
   <div class="rem">
     <div class="kkk">kkk</div>
@@ -9,7 +10,7 @@
 
 <script setup lang="ts">
 import { useRouter } from "vue-router";
-import { getUserInfo } from "@/api/index";
+import { getUserInfo, fikuserInfo } from "@/api/index";
 import { useCounterStore } from "@/store/user";
 import { storeToRefs } from "pinia";
 import { useMousePosition } from "@/hooks/user";
@@ -24,6 +25,10 @@ function add() {
 }
 async function signIn() {
   let res = await getUserInfo();
+  console.log(res);
+}
+async function getMessage() {
+  let res = await fikuserInfo({ name: 99 });
   console.log(res);
 }
 function signOut() {
@@ -43,7 +48,6 @@ onActivated(() => {
 onDeactivated(() => {
   console.log("初次卸载");
 });
-
 </script>
 <style lang="scss" scoped>
 .rem {

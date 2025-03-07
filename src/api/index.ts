@@ -13,3 +13,11 @@ export function getUserInfo() {
     method: "get",
   });
 }
+
+export function fikuserInfo(data) {
+  return request({
+    url: "/fik/user/info",
+    method: "post",
+    data:data
+  });
+}

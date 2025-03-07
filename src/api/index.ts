@@ -6,3 +6,10 @@ export function login() {
     method: "post",
   });
 }
+
+export function getUserInfo() {
+  return request({
+    url: "/fik/userInfo",
+    method: "get",
+  });
+}

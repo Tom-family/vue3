@@ -1,5 +1,5 @@
 <template>
-  <div @click="signIn">首页</div>
+  <div @click="signIn">用户信息</div>
   <div @click="signOut">退出</div>
   <div>{{ count2 }}</div>
   <div class="rem">
@@ -9,11 +9,12 @@
 
 <script setup lang="ts">
 import { useRouter } from "vue-router";
-import { login } from "@/api/index";
+import { getUserInfo } from "@/api/index";
 import { useCounterStore } from "@/store/user";
 import { storeToRefs } from "pinia";
 import { useMousePosition } from "@/hooks/user";
 import { onActivated, onDeactivated } from "vue";
+
 const router = useRouter();
 const counterStore = useCounterStore();
 const hooks = useMousePosition();
@@ -22,7 +23,7 @@ function add() {
   counterStore.increment();
 }
 async function signIn() {
-  let res = await login();
+  let res = await getUserInfo();
   console.log(res);
 }
 function signOut() {

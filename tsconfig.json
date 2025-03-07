@@ -19,5 +19,5 @@
     }
   },
   //指定需要包含在编译范围内的文件或目录    通过这些配置，你可以确保 TypeScript 编译器能够正确地处理 Vue 3 项目中的代码，并与现代开发工具（如 Vite、ESLint、Vitest 等）无缝集成。
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "vite.config.*", "vitest.config.*", "cypress.config.*", "nightwatch.conf.*", "playwright.config.*", "eslint.config.*", "auto-imports.d.ts"]
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "vite.config.*", "vitest.config.*", "cypress.config.*", "nightwatch.conf.*", "playwright.config.*", "eslint.config.*", "auto-imports.d.ts", "mock"]
 }

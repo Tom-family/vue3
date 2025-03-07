@@ -6,6 +6,7 @@ import vueDevTools from "vite-plugin-vue-devtools";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { VantResolver } from "@vant/auto-import-resolver";
+import mockDevServerPlugin from 'vite-plugin-mock-dev-server';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -18,10 +19,16 @@ export default defineConfig({
     Components({
       resolvers: [VantResolver()],
     }),
+    mockDevServerPlugin({
+      include: ['mock/**/*.mock.{js,ts,cjs,mjs,json,json5}'],
+      cors: true,
+      log: 'info',
+    }),
   ],
   base: './', // 根据你的部署环境设置正确的 base URL
   server: {
     proxy: {
+      '^/fik': '',
       "/api": {
         target: "http://150.158.92.141:9009/api",
         changeOrigin: true,

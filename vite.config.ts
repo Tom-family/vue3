@@ -27,6 +27,8 @@ export default defineConfig({
   ],
   base: './', // 根据你的部署环境设置正确的 base URL
   server: {
+    host: true, // IP配置，支持从IP启动
+    port: 5173, // 类型： number 指定服务器端口;
     proxy: {
       '^/fik': '',
       "/api": {

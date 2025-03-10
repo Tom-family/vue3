@@ -1,26 +1,24 @@
 @import "../fonts/iconfont.css";
 
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  --bg-color-light: white;
+  --bg-color-dark: black;
+  --text-color-light: black;
+  --text-color-dark: white;
+}
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+/* 默认 light 主题 */
+[data-theme="light"] {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  --box-bg-color: red;
+}
 
-  --vt-c-indigo: #2c3e50;
-
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
-
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+/* dark 主题 */
+[data-theme="dark"] {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+  --box-bg-color: blue;
 }
 
 * {

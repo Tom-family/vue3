@@ -15,6 +15,7 @@
     <div class="kkk">kkk</div>
   </div>
   <div>111111111</div>
+  <button @click="toggleTheme">切换主题</button>
 </template>
 
 <script setup lang="ts">
@@ -24,6 +25,7 @@ import { useCounterStore } from "@/store/user";
 import { storeToRefs } from "pinia";
 import { useMousePosition } from "@/hooks/user";
 import { onActivated, onDeactivated } from "vue";
+import { useThemeStore } from "@/store/theme";
 
 const router = useRouter();
 const counterStore = useCounterStore();
@@ -51,6 +53,11 @@ counterStore.$subscribe((mutation, state) => {
 // showToast("提示内容");
 hooks.add();
 
+const themeStore = useThemeStore();
+function toggleTheme() {
+  themeStore.updateTheme(true);
+}
+
 onActivated(() => {
   console.log("初次加载");
 });
@@ -62,7 +69,7 @@ onDeactivated(() => {
 .rem {
   width: 200px;
   height: 200px;
-  background: red;
+  background: var(--box-bg-color);
   .kkk {
     width: 100px;
     height: 100px;

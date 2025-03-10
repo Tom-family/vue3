@@ -3,6 +3,8 @@
   <div @click="signOut">退出</div>
   <div @click="getMessage">获取用户信息</div>
   <div>{{ count2 }}</div>
+  <i class="iconfont icon-a-25K"></i>
+  1
   <div class="rem">
     <div class="kkk">kkk</div>
   </div>

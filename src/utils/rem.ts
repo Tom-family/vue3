@@ -8,8 +8,8 @@ setRem();
 //监听窗口变化 改变窗口大小时重新设置 rem
 let resizeTimer: ReturnType<typeof setTimeout>;
 window.addEventListener("resize", function () {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
+  // clearTimeout(resizeTimer);
+  // resizeTimer = setTimeout(() => {
     setRem();
-  }, 200); // 200ms 防抖
+  // }, 200); // 200ms 防抖
 });

@@ -33,7 +33,7 @@ const tabbarList = [
 </script>
 <style lang="scss" scoped>
 .tabbar-page {
-  background: #000;
+  background: var(--bg-color-dark);
   height: 60px;
   position: fixed;
   bottom: 0;

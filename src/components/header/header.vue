@@ -13,10 +13,12 @@
   left: 0;
   right: 0;
   height: 50px;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: var(--bg-color-dark);
+  border-bottom: 1px solid var(--cut-box);
   .title {
     font-size: 17px;
     font-weight: 700;

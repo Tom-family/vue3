@@ -31,6 +31,18 @@ const router = createRouter({
           },
         },
         {
+          path: "/other",
+          name: "other",
+          component: () => import("@/views/other/Other.vue"),
+          meta: {
+            title: "其他",
+            keep: true,
+            header: true,
+            tabbar: true,
+            code: 2,
+          },
+        },
+        {
           path: "/my",
           name: "my",
           component: () => import("@/views/my/My.vue"),
@@ -39,7 +51,7 @@ const router = createRouter({
             keep: false,
             header: true,
             tabbar: true,
-            code: 2,
+            code: 3,
           },
         },
       ],

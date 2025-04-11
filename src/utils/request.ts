@@ -32,7 +32,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (response: AxiosResponse) => {
     if (response.status === 200) {
-      if (response.data.code == 0) {
+      if (response.data.code == 10000) {
         return response.data;
       } else {
         showToast(response.data.message);

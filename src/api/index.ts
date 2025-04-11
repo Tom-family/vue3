@@ -1,9 +1,10 @@
 import request from "@/utils/request";
 
-export function login() {
+export function login(data) {
   return request({
-    url: "/api/login?account=13812345678&pwd=123456",
+    url: "/api/user/login",
     method: "post",
+    data
   });
 }
 
@@ -21,3 +22,13 @@ export function fikuserInfo(data) {
     data:data
   });
 }
+
+// 登录
+export function userList(data) {
+  return request({
+    url: "/api/dataDayFootage/page",
+    method: "post",
+    data:data
+  });
+}
+

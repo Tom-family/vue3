@@ -1,5 +1,5 @@
 <template>
-  <van-config-provider :theme="currentTheme">
+  <van-config-provider :theme="currentTheme" class="app-provider">
     <router-view />
   </van-config-provider>
 </template>
@@ -12,4 +12,8 @@ themeStore.updateTheme(false);
 const { currentTheme } = storeToRefs(themeStore);
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.app-provider {
+  height: 100%;
+}
+</style>

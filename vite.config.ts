@@ -43,7 +43,7 @@ export default defineConfig({
     proxy: {
       "^/fik": "",
       "/api": {
-        target: "http://150.158.92.141:9009/api",
+        target: 'http://192.168.1.13:8170/wms',
         changeOrigin: true,
         secure: true,
         rewrite: (path) => path.replace(/^\/api/, ""), // 重写路径

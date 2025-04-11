@@ -23,11 +23,18 @@ const tabbarList = [
     code: "1",
   },
   {
+    name: "列表",
+    img: new URL("@/assets/svg/my.svg", import.meta.url).href,
+    img_active: new URL("@/assets/svg/my_active.svg", import.meta.url).href,
+    url: "/other",
+    code: "2",
+  },
+  {
     name: "我的",
     img: new URL("@/assets/svg/my.svg", import.meta.url).href,
     img_active: new URL("@/assets/svg/my_active.svg", import.meta.url).href,
     url: "/my",
-    code: "2",
+    code: "3",
   },
 ];
 </script>

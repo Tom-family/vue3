@@ -41,3 +41,10 @@ body,
   width: 100%;
   // overflow: auto;
 }
+
+// 控制下拉刷新时页面出现两个加载问题
+.list-page {
+  .van-list__loading {
+    display: none;
+  }
+}

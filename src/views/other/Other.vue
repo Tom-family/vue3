@@ -1,5 +1,5 @@
 <template>
-  <div class="card-page">
+  <div class="card-page" :class="{ 'list-page': refreshing }">
     <van-pull-refresh class="refresh-box" v-model="refreshing" @refresh="onRefresh">
       <van-list v-model:loading="loading" :finished="finished" :finished-text="finishedText" @load="getList" offset="30">
         <van-empty description="暂无数据" v-if="noData" />
